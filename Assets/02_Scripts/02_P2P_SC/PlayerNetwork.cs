@@ -7,6 +7,7 @@ using UnityEditor.PackageManager;
 
 public class PlayerNetwork : NetworkBehaviour {
 
+    [SerializeField] private Transform spawnedObjectPrefab;
 
     private NetworkVariable<MyCustomData> randomNumber = new NetworkVariable<MyCustomData>(
         new MyCustomData {
@@ -37,7 +38,8 @@ public class PlayerNetwork : NetworkBehaviour {
         if (!IsOwner) return;
 
         if (Input.GetKeyDown(KeyCode.T)) {
-            PrototypeClientRpc(new ClientRpcParams { Send = new ClientRpcSendParams { TargetClientIds = new List<ulong> { 1 } } });
+            Instantiate(spawnedObjectPrefab);
+            //PrototypeClientRpc(new ClientRpcParams { Send = new ClientRpcSendParams { TargetClientIds = new List<ulong> { 1 } } });
             /*randomNumber.Value = new MyCustomData {
                 _int = 10,
                 _bool = false,
