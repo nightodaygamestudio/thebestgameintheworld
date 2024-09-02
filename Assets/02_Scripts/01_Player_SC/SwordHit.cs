@@ -1,36 +1,21 @@
+using System.Collections;
 using UnityEngine;
 
 public class SwordHit : MonoBehaviour
 {
-    public GameObject[] BodyParts;
-    public float force;
-
-
+    public float CD;
+    public Collider hitCollider;
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collision");
-        if (collision.gameObject.CompareTag("Weapon"))
+        if (collision.gameObject.CompareTag("BodyPart"))
         {
-            foreach (GameObject part in BodyParts)
-            {
-                if (collision.contacts[0].thisCollider.gameObject == part)
-                {
-                    DetachBodyPart(part);
-                    break;
-                }
-            }
+            hitCollider.enabled = false;
+            StartCoroutine(hitCD());
         }
     }
-
-    void DetachBodyPart(GameObject part)
+    private IEnumerator hitCD()
     {
-        Debug.Log("fall");
-        part.transform.parent = null;
-        Rigidbody rb = part.GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            rb.isKinematic = false;
-            rb.AddForce(transform.forward * force);
-        }
+        yield return new WaitForSeconds(CD);
+        hitCollider.enabled = true;
     }
 }
