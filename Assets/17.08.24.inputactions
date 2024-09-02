@@ -24,10 +24,19 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Fire",
+                    "name": "UpAttack",
                     "type": "Button",
                     "id": "cbce8f14-b2c2-459f-aa31-4c9bdb7cc4ea",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Hold(duration=0.85)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SideAttack",
+                    "type": "Button",
+                    "id": "140c4d9c-318a-46ff-b1e7-1b40c319d6ad",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "Hold(duration=0.85)",
                     "initialStateCheck": false
@@ -206,7 +215,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Fire",
+                    "action": "UpAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c217bdb5-169d-4575-ac88-3f28c4b4b6b7",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "SideAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
