@@ -2,7 +2,6 @@ using Unity.Netcode;
 using Unity.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.PackageManager;
 
 
 public class PlayerNetwork : NetworkBehaviour {
