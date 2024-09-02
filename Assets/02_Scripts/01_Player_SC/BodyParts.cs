@@ -6,6 +6,7 @@ public class BodyParts : MonoBehaviour
     public float destroyTime;
     public float force;
     public Collider Collider;
+    public GameObject hitEffectBlood;
     private void Start()
     {
         Collider = GetComponent<Collider>();
@@ -24,11 +25,11 @@ public class BodyParts : MonoBehaviour
 
     void DetachBodyPart()
     {
-
+        Instantiate(hitEffectBlood, transform.position, transform.rotation);
         transform.parent = null;
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.isKinematic = false;
-        Vector3 forceDirection = (transform.position - transform.position).normalized + Vector3.up;
+        Vector3 forceDirection = (transform.position - transform.position).normalized + Vector3.right;
         rb.AddForce(forceDirection * force, ForceMode.Impulse);
         Debug.Log("2");
         Collider.enabled = false;

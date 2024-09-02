@@ -148,12 +148,12 @@ Transform:
   m_GameObject: {fileID: 97356349}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.28799438, y: 1.3789, z: -0.1586914}
-  m_LocalScale: {x: 0.27215236, y: -0.8671374, z: 0.32272652}
+  m_LocalPosition: {x: -0.5276235, y: -0.78451675, z: 0.011351181}
+  m_LocalScale: {x: 0.43247128, y: -1.3085778, z: 0.8336104}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 590137269}
-  m_Father: {fileID: 177753576}
+  m_Father: {fileID: 1512712725}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &97356351
 BoxCollider:
@@ -242,8 +242,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0
-  force: 2
+  force: 10
   Collider: {fileID: 0}
+  hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &97356355
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -302,8 +303,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1721243860}
-  - {fileID: 536764217}
-  - {fileID: 97356350}
   - {fileID: 1512712725}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -437,7 +436,7 @@ Transform:
   m_GameObject: {fileID: 271677280}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 258.05, y: 3.6892, z: 335.251}
+  m_LocalPosition: {x: 258.05, y: 3.2092, z: 335.251}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -660,8 +659,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0
-  force: 2
+  force: 10
   Collider: {fileID: 0}
+  hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &408422933
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -912,12 +912,12 @@ Transform:
   m_GameObject: {fileID: 536764216}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3659973, y: 1.3789, z: -0.1586914}
-  m_LocalScale: {x: 0.27215236, y: -0.8671374, z: 0.32272652}
+  m_LocalPosition: {x: 0.5116202, y: -0.78451675, z: 0.011351181}
+  m_LocalScale: {x: 0.43247128, y: -1.3085778, z: 0.8336104}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1796428100}
-  m_Father: {fileID: 177753576}
+  m_Father: {fileID: 1512712725}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &536764218
 BoxCollider:
@@ -1006,8 +1006,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0
-  force: 2
+  force: 10
   Collider: {fileID: 0}
+  hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &536764222
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1267,8 +1268,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0
-  force: 2
+  force: 10
   Collider: {fileID: 0}
+  hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &590137274
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1420,8 +1422,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0
-  force: 2
+  force: 10
   Collider: {fileID: 0}
+  hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &606892014
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1665,8 +1668,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0
-  force: 2
+  force: 10
   Collider: {fileID: 0}
+  hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &725803361
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1817,8 +1821,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0
-  force: 2
+  force: 10
   Collider: {fileID: 0}
+  hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &803052179
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2043,7 +2048,8 @@ Transform:
   m_LocalPosition: {x: -0.007624545, y: 0.5420172, z: -0.003971593}
   m_LocalScale: {x: 0.3554101, y: -0.10353978, z: 0.73529625}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1759543458}
   m_Father: {fileID: 1721243860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1053326975
@@ -2133,8 +2139,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0
-  force: 2
+  force: 10
   Collider: {fileID: 0}
+  hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &1053326979
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2286,8 +2293,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0
-  force: 2
+  force: 10
   Collider: {fileID: 0}
+  hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &1110907506
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2641,8 +2649,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0
-  force: 2
+  force: 10
   Collider: {fileID: 0}
+  hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &1468479232
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2681,6 +2690,7 @@ GameObject:
   - component: {fileID: 1512712725}
   - component: {fileID: 1512712728}
   - component: {fileID: 1512712727}
+  - component: {fileID: 1512712731}
   - component: {fileID: 1512712726}
   - component: {fileID: 1512712730}
   m_Layer: 6
@@ -2702,7 +2712,9 @@ Transform:
   m_LocalPosition: {x: 0.044036865, y: 1.8987651, z: -0.16308594}
   m_LocalScale: {x: 0.6292958, y: 0.66265637, z: 0.3871431}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 536764217}
+  - {fileID: 97356350}
   m_Father: {fileID: 177753576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1512712726
@@ -2806,6 +2818,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1512712731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512712724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d279a2110038ba43b5eebc77852232a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTime: 0
+  force: 20
+  Collider: {fileID: 0}
+  hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!1 &1581237586
 GameObject:
   m_ObjectHideFlags: 0
@@ -3031,8 +3059,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0
-  force: 2
+  force: 10
   Collider: {fileID: 0}
+  hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &1657177880
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3183,8 +3212,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0
-  force: 2
+  force: 10
   Collider: {fileID: 0}
+  hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &1708125398
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3250,7 +3280,6 @@ Transform:
   - {fileID: 1657177875}
   - {fileID: 408422928}
   - {fileID: 1053326974}
-  - {fileID: 1759543458}
   m_Father: {fileID: 177753576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1721243861
@@ -3340,8 +3369,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0
-  force: 2
+  force: 20
   Collider: {fileID: 0}
+  hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &1721243865
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3398,12 +3428,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759543457}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.016153032, y: 0.80175966, z: 0}
-  m_LocalScale: {x: 0.6698613, y: 0.5220985, z: 1.5395259}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.023996184, y: -2.5086248, z: 0.005401351}
+  m_LocalScale: {x: 1.884756, y: -5.042492, z: 2.0937493}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1721243860}
+  m_Father: {fileID: 1053326974}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1759543460
 MeshRenderer:
@@ -3471,8 +3501,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0
-  force: 2
+  force: 10
   Collider: {fileID: 0}
+  hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &1759543463
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3645,8 +3676,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0
-  force: 2
+  force: 10
   Collider: {fileID: 0}
+  hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &1796428105
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3845,7 +3877,7 @@ Transform:
   m_GameObject: {fileID: 1971652854}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 258.05, y: 0.69, z: 335.251}
+  m_LocalPosition: {x: 258.05, y: 0.21, z: 335.251}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4133,9 +4165,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 1.7845685
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.10772107, z: 0}
 --- !u!23 &2046290514
 MeshRenderer:
   m_ObjectHideFlags: 0
