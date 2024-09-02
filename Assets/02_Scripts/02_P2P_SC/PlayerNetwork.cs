@@ -37,7 +37,8 @@ public class PlayerNetwork : NetworkBehaviour {
         if (!IsOwner) return;
 
         if (Input.GetKeyDown(KeyCode.T)) {
-            Instantiate(spawnedObjectPrefab);
+            Transform spawnedObjectTransform = Instantiate(spawnedObjectPrefab);
+            spawnedObjectTransform.GetComponent<NetworkObject>().Spawn(true);
             //PrototypeClientRpc(new ClientRpcParams { Send = new ClientRpcSendParams { TargetClientIds = new List<ulong> { 1 } } });
             /*randomNumber.Value = new MyCustomData {
                 _int = 10,
