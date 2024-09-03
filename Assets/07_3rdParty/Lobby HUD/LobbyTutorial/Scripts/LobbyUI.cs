@@ -30,13 +30,25 @@ public class LobbyUI : MonoBehaviour {
         playerSingleTemplate.gameObject.SetActive(false);
 
         changeMarineButton.onClick.AddListener(() => {
-            LobbyManager.Instance.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Marine);
+            LobbyManager.Instance.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Green);
         });
         changeNinjaButton.onClick.AddListener(() => {
-            LobbyManager.Instance.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Ninja);
+            LobbyManager.Instance.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Orange);
         });
         changeZombieButton.onClick.AddListener(() => {
-            LobbyManager.Instance.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Zombie);
+            LobbyManager.Instance.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Purple);
+        });
+        changeZombieButton.onClick.AddListener(() => {
+            LobbyManager.Instance.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Red);
+        });
+        changeZombieButton.onClick.AddListener(() => {
+            LobbyManager.Instance.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Violet);
+        });
+        changeZombieButton.onClick.AddListener(() => {
+            LobbyManager.Instance.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Yellow);
+        });
+        changeZombieButton.onClick.AddListener(() => {
+            LobbyManager.Instance.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Blue);
         });
 
         leaveLobbyButton.onClick.AddListener(() => {
