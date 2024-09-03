@@ -7,6 +7,11 @@ TagManager:
   - CinemachineTarget
   - Weapon
   - BodyPart
+  - Head/Neck
+  - Torso/Waist
+  - L_Thigh
+  - R_Thigh
+  - Ground
   layers:
   - Default
   - TransparentFX

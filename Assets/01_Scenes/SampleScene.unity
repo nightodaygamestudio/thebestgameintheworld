@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 97356355}
   m_Layer: 6
   m_Name: L_Thigh
-  m_TagString: BodyPart
+  m_TagString: L_Thigh
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -243,7 +243,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 0
   force: 10
-  Collider: {fileID: 0}
+  cutOff: 0
+  TorsoHitRBRemover: 0
   hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &97356355
 Rigidbody:
@@ -282,6 +283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 177753576}
   - component: {fileID: 177753578}
+  - component: {fileID: 177753579}
   m_Layer: 0
   m_Name: TestDummy
   m_TagString: Untagged
@@ -333,6 +335,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &177753579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177753575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f7a89274188984d9d47268cc818948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &236303239
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,8 +579,8 @@ Transform:
   m_GameObject: {fileID: 408422927}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.7914199, y: 0.44439808, z: 0}
-  m_LocalScale: {x: 0.1729353, y: 0.70825565, z: 1}
+  m_LocalPosition: {x: -0.845, y: 0.44439808, z: -0.003}
+  m_LocalScale: {x: 0.1729353, y: 0.70825565, z: 1.0766009}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1110907501}
@@ -660,7 +674,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 0
   force: 10
-  Collider: {fileID: 0}
+  cutOff: 0
+  TorsoHitRBRemover: 1
   hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &408422933
 Rigidbody:
@@ -822,6 +837,7 @@ GameObject:
   - component: {fileID: 524366817}
   - component: {fileID: 524366819}
   - component: {fileID: 524366820}
+  - component: {fileID: 524366821}
   m_Layer: 0
   m_Name: ScriptManager
   m_TagString: Untagged
@@ -881,6 +897,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72624c560e2ba724e9a0ad460e1b8ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDead: 0
+--- !u!114 &524366821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524366816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5360ee1a389a3094aba62bc8dd6d4ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SloMoFactor: 0.1
+  SloMoTime: 0.1
+  Head_Neck_Hit: 0
+  Torso_Waist_Hit: 0
+  L_Thigh_Hit: 0
+  R_Thigh_Hit: 0
   HasBeenHit: 0
 --- !u!1 &536764216
 GameObject:
@@ -898,7 +933,7 @@ GameObject:
   - component: {fileID: 536764222}
   m_Layer: 6
   m_Name: R_Thigh
-  m_TagString: BodyPart
+  m_TagString: R_Thigh
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1007,7 +1042,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 0
   force: 10
-  Collider: {fileID: 0}
+  cutOff: 0
+  TorsoHitRBRemover: 0
   hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &536764222
 Rigidbody:
@@ -1269,7 +1305,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 0
   force: 10
-  Collider: {fileID: 0}
+  cutOff: 0
+  TorsoHitRBRemover: 0
   hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &590137274
 Rigidbody:
@@ -1423,7 +1460,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 0
   force: 10
-  Collider: {fileID: 0}
+  cutOff: 0
+  TorsoHitRBRemover: 1
   hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &606892014
 Rigidbody:
@@ -1465,7 +1503,7 @@ GameObject:
   - component: {fileID: 716130369}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1669,7 +1707,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 0
   force: 10
-  Collider: {fileID: 0}
+  cutOff: 0
+  TorsoHitRBRemover: 1
   hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &725803361
 Rigidbody:
@@ -1822,7 +1861,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 0
   force: 10
-  Collider: {fileID: 0}
+  cutOff: 0
+  TorsoHitRBRemover: 1
   hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &803052179
 Rigidbody:
@@ -2031,7 +2071,7 @@ GameObject:
   - component: {fileID: 1053326979}
   m_Layer: 6
   m_Name: Neck
-  m_TagString: BodyPart
+  m_TagString: Head/Neck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2140,7 +2180,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 0
   force: 10
-  Collider: {fileID: 0}
+  cutOff: 0
+  TorsoHitRBRemover: 1
   hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &1053326979
 Rigidbody:
@@ -2294,7 +2335,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 0
   force: 10
-  Collider: {fileID: 0}
+  cutOff: 0
+  TorsoHitRBRemover: 1
   hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &1110907506
 Rigidbody:
@@ -2650,7 +2692,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 0
   force: 10
-  Collider: {fileID: 0}
+  cutOff: 0
+  TorsoHitRBRemover: 0
   hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &1468479232
 Rigidbody:
@@ -2695,7 +2738,7 @@ GameObject:
   - component: {fileID: 1512712730}
   m_Layer: 6
   m_Name: Waist
-  m_TagString: BodyPart
+  m_TagString: Torso/Waist
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2832,7 +2875,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 0
   force: 20
-  Collider: {fileID: 0}
+  cutOff: 0
+  TorsoHitRBRemover: 0
   hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!1 &1581237586
 GameObject:
@@ -2965,8 +3009,8 @@ Transform:
   m_GameObject: {fileID: 1657177874}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.79004437, y: 0.4299602, z: 0}
-  m_LocalScale: {x: 0.1729353, y: 0.70825565, z: 1}
+  m_LocalPosition: {x: 0.837, y: 0.4299602, z: -0.003}
+  m_LocalScale: {x: 0.1729353, y: 0.70825565, z: 1.0766009}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 606892009}
@@ -3060,7 +3104,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 0
   force: 10
-  Collider: {fileID: 0}
+  cutOff: 0
+  TorsoHitRBRemover: 1
   hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &1657177880
 Rigidbody:
@@ -3070,7 +3115,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657177874}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 61.95
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -3213,7 +3258,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 0
   force: 10
-  Collider: {fileID: 0}
+  cutOff: 0
+  TorsoHitRBRemover: 0
   hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &1708125398
 Rigidbody:
@@ -3258,7 +3304,7 @@ GameObject:
   - component: {fileID: 1721243865}
   m_Layer: 6
   m_Name: Torso
-  m_TagString: BodyPart
+  m_TagString: Torso/Waist
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3369,8 +3415,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0
-  force: 20
-  Collider: {fileID: 0}
+  force: 50
+  cutOff: 0
+  TorsoHitRBRemover: 0
   hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &1721243865
 Rigidbody:
@@ -3415,7 +3462,7 @@ GameObject:
   - component: {fileID: 1759543464}
   m_Layer: 6
   m_Name: Head
-  m_TagString: BodyPart
+  m_TagString: Head/Neck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3502,7 +3549,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 0
   force: 10
-  Collider: {fileID: 0}
+  cutOff: 0
+  TorsoHitRBRemover: 1
   hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &1759543463
 Rigidbody:
@@ -3677,7 +3725,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 0
   force: 10
-  Collider: {fileID: 0}
+  cutOff: 0
+  TorsoHitRBRemover: 0
   hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!54 &1796428105
 Rigidbody:

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,10 +19,7 @@ public class FirstPersonCamera : MonoBehaviour, i_Update
         UpdateManager.Instance.UnregisterUpdate(this);
     }
 
-    public void CostumUpdate()
-    {
-        CameraLooking();
-    }
+    public void CostumUpdate() { CameraLooking(); }
 
     public void CameraLooking()
     {
@@ -33,8 +28,5 @@ public class FirstPersonCamera : MonoBehaviour, i_Update
         pitch = Mathf.Clamp(pitch, -90f, 90f);
         transform.localEulerAngles = new Vector3(pitch, transform.eulerAngles.y, 0f);
     }
-    public void OnMouseMove(InputAction.CallbackContext context)
-    {
-        mouseInput = context.ReadValue<Vector2>();
-    }
+    public void OnMouseMove(InputAction.CallbackContext context) { mouseInput = context.ReadValue<Vector2>(); }
 }

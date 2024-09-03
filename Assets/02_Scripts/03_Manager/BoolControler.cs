@@ -7,7 +7,7 @@ public class BoolControler : MonoBehaviour
 
     //-----------//
 
-    public bool HasBeenHit;
+    public bool isDead;
 
     //-----------//
     private void Awake()
