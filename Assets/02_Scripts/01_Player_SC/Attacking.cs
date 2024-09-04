@@ -1,21 +1,35 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class Attacking : MonoBehaviour
+public class Attacking : MonoBehaviour, i_Update
 {
     [Header("Values")]
     public bool canAttack;
     public float AttackSpeed;
     [Header("Objects")]
-    [SerializeField] Animator UpAttackAnim;
+    [SerializeField] Animator AttackAnim;
     [SerializeField] Collider swordCollider;
+
+    private void Start()
+    {
+        UpdateManager.Instance.RegisterUpdate(this);
+    }
+
+    private void OnDisable()
+    {
+        UpdateManager.Instance.UnregisterUpdate(this);
+    }
+
+    public void CostumUpdate()
+    {
+        ColliderControler();
+    }
     public void OnUpAttack(InputAction.CallbackContext context)
     {
         if (context.started && canAttack)
         {
-            UpAttackAnim.SetTrigger("UpAttack");
+            AttackAnim.SetTrigger("UpAttack");
             canAttack = false;
-            swordCollider.enabled = true;
             StartCoroutine(OnAttackIsCD());
         }
     }
@@ -23,16 +37,25 @@ public class Attacking : MonoBehaviour
     {
         if (context.started && canAttack)
         {
-            UpAttackAnim.SetTrigger("SideAttack");
+            AttackAnim.SetTrigger("SideAttack");
             canAttack = false;
-            swordCollider.enabled = true;
             StartCoroutine(OnAttackIsCD());
+        }
+    }
+    private void ColliderControler()
+    {
+        if (AttackAnim.GetCurrentAnimatorStateInfo(0).IsName("UpperStrike") || AttackAnim.GetCurrentAnimatorStateInfo(0).IsName("SideStrike"))
+        {
+            swordCollider.enabled = true;
+        }
+        else
+        {
+            swordCollider.enabled = false;
         }
     }
     public IEnumerator OnAttackIsCD()
     {
         yield return new WaitForSeconds(AttackSpeed);
         canAttack = true;
-        swordCollider.enabled = false;
     }
 }

@@ -346,6 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f7a89274188984d9d47268cc818948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthSlider: {fileID: 0}
   maxHealth: 100
   currentHealth: 100
 --- !u!1 &236303239
@@ -3966,10 +3967,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1971652856}
-  - component: {fileID: 1971652855}
-  - component: {fileID: 1971652857}
   - component: {fileID: 1971652858}
+  - component: {fileID: 1971652857}
   - component: {fileID: 1971652859}
+  - component: {fileID: 1971652855}
   m_Layer: 0
   m_Name: MainChar
   m_TagString: Untagged
