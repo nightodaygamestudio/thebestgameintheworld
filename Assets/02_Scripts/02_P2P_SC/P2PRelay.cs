@@ -17,6 +17,8 @@ public class P2PRelay : MonoBehaviour
         };
 
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
+
+        CreateRelay();
     }
 
     private async void CreateRelay() {

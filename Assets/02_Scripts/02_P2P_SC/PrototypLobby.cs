@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Threading;
 
 
-/*
 
 public class PrototypLobby : MonoBehaviour
 {
@@ -281,6 +280,4 @@ public class PrototypLobby : MonoBehaviour
         
     }
 } 
-
-*/
      
