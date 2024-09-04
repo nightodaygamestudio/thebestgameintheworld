@@ -15,7 +15,6 @@ public class HitControler : MonoBehaviour
     public bool HasBeenHit;
     public GameObject hitEffectBlood;
 
-
     //-----------//
 
     public IEnumerator SlowMow()
@@ -23,10 +22,10 @@ public class HitControler : MonoBehaviour
         Time.timeScale = SloMoFactor;
         yield return new WaitForSeconds(SloMoTime);
         Time.timeScale = 1f;
-        yield return null;
     }
     //-----------//
-    private void Awake() { Instance = this; }
-
-
+    private void Awake()
+    { 
+        Instance = this;
+    }
 }
