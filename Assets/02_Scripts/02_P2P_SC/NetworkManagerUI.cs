@@ -7,7 +7,6 @@ public class NetworkManagerUI : NetworkBehaviour
 
     [SerializeField] private Button hostBtn;
     [SerializeField] private Button joinBtn;
-
     private void Awake()
     {
         hostBtn.onClick.AddListener(() => {

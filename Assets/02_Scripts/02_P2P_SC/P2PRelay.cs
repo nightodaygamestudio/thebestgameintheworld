@@ -1,3 +1,4 @@
+using QFSW.QC;
 using UnityEngine;
 using Unity.Services.Core;
 using Unity.Services.Authentication;
@@ -6,9 +7,28 @@ using Unity.Services.Relay.Models;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
 using Unity.Networking.Transport.Relay;
+using System.Security.Cryptography;
+using UnityEngine.UI;
+
+
 
 public class P2PRelay : MonoBehaviour 
 {
+    /*
+    [SerializeField] private Button hostBtn;
+    [SerializeField] private Button joinBtn;
+
+    private void Awake()
+    {
+        hostBtn.onClick.AddListener(() => {
+            CreateRelay();  
+        });
+        joinBtn.onClick.AddListener(() => {
+            JoinRelay(string joinCode);
+        });
+    }
+    */
+
     private async void Start()  {
         await UnityServices.InitializeAsync();
 
@@ -18,12 +38,12 @@ public class P2PRelay : MonoBehaviour
 
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
 
-        CreateRelay();
     }
 
-    private async void CreateRelay() {
+    [Command]
+    public async void CreateRelay() {
         try { 
-            Allocation allocation = await RelayService.Instance.CreateAllocationAsync(3);
+            Allocation allocation = await RelayService.Instance.CreateAllocationAsync(1);
 
             string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
 
@@ -40,7 +60,8 @@ public class P2PRelay : MonoBehaviour
         }
     }
 
-    private async void JoinRelay(string joinCode) {
+    [Command]
+    public async void JoinRelay(string joinCode) {
         try
         {
             Debug.Log("Joining Relay with " + joinCode);
