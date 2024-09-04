@@ -23,6 +23,7 @@ public class HitControler : MonoBehaviour
         Time.timeScale = SloMoFactor;
         yield return new WaitForSeconds(SloMoTime);
         Time.timeScale = 1f;
+        yield return null;
     }
     //-----------//
     private void Awake() { Instance = this; }

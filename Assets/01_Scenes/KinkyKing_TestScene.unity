@@ -359,7 +359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 61}
+  m_AnchoredPosition: {x: 0, y: -142}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &177753575
@@ -372,7 +372,6 @@ GameObject:
   m_Component:
   - component: {fileID: 177753576}
   - component: {fileID: 177753578}
-  - component: {fileID: 177753580}
   - component: {fileID: 177753581}
   m_Layer: 0
   m_Name: TestDummy
@@ -425,21 +424,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &177753580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 177753575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9280c53648027594f9ec9b129edae31d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthSlider: {fileID: 160599773}
-  maxHealth: 100
-  currentHealth: 0
 --- !u!114 &177753581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,9 +436,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f7a89274188984d9d47268cc818948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthSlider: {fileID: 160599773}
   maxHealth: 100
   currentHealth: 100
-  healthBar: {fileID: 177753580}
 --- !u!1 &179073921
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1092,14 +1076,14 @@ RectTransform:
   m_GameObject: {fileID: 468292205}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0854583, y: 0.61482334, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 428633945}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.0000019073486}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &468292207
@@ -2438,7 +2422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5803922, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5091,7 +5075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CD: 1.2
   hitCollider: {fileID: 3469287837390583906}
-  ph: {fileID: 0}
+  ph: {fileID: 177753581}
   damage: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
