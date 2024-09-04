@@ -21,7 +21,7 @@ public class P2PRelay : MonoBehaviour
 
     private async void CreateRelay() {
         try { 
-            Allocation allocation = await RelayService.Instance.CreateAllocationAsync(1);
+            Allocation allocation = await RelayService.Instance.CreateAllocationAsync(3);
 
             string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
 
@@ -32,8 +32,8 @@ public class P2PRelay : MonoBehaviour
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
 
             NetworkManager.Singleton.StartHost();
-        }
-        catch (RelayServiceException e) {
+
+        } catch (RelayServiceException e) {
             Debug.Log(e); 
         }
     }
