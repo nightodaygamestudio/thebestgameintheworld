@@ -8,7 +8,6 @@ public class Attacking : MonoBehaviour
     public float AttackSpeed;
     [Header("Objects")]
     [SerializeField] Animator UpAttackAnim;
-
     public void OnUpAttack(InputAction.CallbackContext context)
     {
         if (context.started && canAttack)
@@ -32,5 +31,4 @@ public class Attacking : MonoBehaviour
         yield return new WaitForSeconds(AttackSpeed);
         canAttack = true;
     }
-
 }
