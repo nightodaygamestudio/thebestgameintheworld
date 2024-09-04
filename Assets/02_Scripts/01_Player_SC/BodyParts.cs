@@ -10,9 +10,9 @@ public class BodyParts : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Weapon") && !HitControler.Instance.HasBeenHit && !cutOff)
+        if (collision.gameObject.CompareTag("Weapon") && !HitController.Instance.HasBeenHit && !cutOff)
         {
-            HitControler.Instance.HasBeenHit = true;
+            HitController.Instance.HasBeenHit = true;
             DetachBodyPart();
             Debug.Log("1");
             StartCoroutine(hasbeenhitcd());
@@ -22,7 +22,7 @@ public class BodyParts : MonoBehaviour
     public void DetachBodyPart()
     {
         cutOff = true;
-        Instantiate(HitControler.Instance.hitEffectBlood, transform.position, transform.rotation);
+        Instantiate(HitController.Instance.hitEffectBlood, transform.position, transform.rotation);
         transform.parent = null;
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.isKinematic = false;
@@ -30,6 +30,6 @@ public class BodyParts : MonoBehaviour
         rb.AddForce(forceDirection * force, ForceMode.Impulse);
         Debug.Log("2");
     }
-    IEnumerator hasbeenhitcd() { yield return new WaitForSeconds(1); HitControler.Instance.HasBeenHit = false; }
+    IEnumerator hasbeenhitcd() { yield return new WaitForSeconds(1); HitController.Instance.HasBeenHit = false; }
     IEnumerator Grounded() { yield return new WaitForSeconds(1f); Rigidbody rb = GetComponent<Rigidbody>(); rb.isKinematic = true; }
 }

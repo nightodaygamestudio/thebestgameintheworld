@@ -1,9 +1,9 @@
 using System.Collections;
 using UnityEngine;
 
-public class HitControler : MonoBehaviour
+public class HitController : MonoBehaviour
 {
-    public static HitControler Instance { get; private set; }
+    public static HitController Instance { get; private set; }
 
     //-----------//
     public float SloMoFactor;
