@@ -4173,6 +4173,7 @@ MonoBehaviour:
   canAttack: 1
   AttackSpeed: 2
   UpAttackAnim: {fileID: 895246221}
+  swordCollider: {fileID: 3469287837390583906}
 --- !u!1 &2013231473
 GameObject:
   m_ObjectHideFlags: 0
