@@ -19,25 +19,25 @@ public class SwordHit : MonoBehaviour
         if (collision.gameObject.CompareTag("Head/Neck"))
         {
             hitCollider.enabled = false;
-            HitControler.Instance.Head_Neck_Hit = true;
+            HitController.Instance.Head_Neck_Hit = true;
             StartCoroutine(hitCD());
         }
         if (collision.gameObject.CompareTag("Torso/Waist"))
         {
             hitCollider.enabled = false;
-            HitControler.Instance.Torso_Waist_Hit = true;
+            HitController.Instance.Torso_Waist_Hit = true;
             StartCoroutine(hitCD());
         }
         if (collision.gameObject.CompareTag("L_Thigh"))
         {
             hitCollider.enabled = false;
-            HitControler.Instance.L_Thigh_Hit = true;
+            HitController.Instance.L_Thigh_Hit = true;
             StartCoroutine(hitCD());
         }
         if (collision.gameObject.CompareTag("R_Thigh"))
         {
             hitCollider.enabled = false;
-            HitControler.Instance.R_Thigh_Hit = true;
+            HitController.Instance.R_Thigh_Hit = true;
             StartCoroutine(hitCD());
         }
     }
@@ -48,7 +48,7 @@ public class SwordHit : MonoBehaviour
         {
             ph.TakeDamage(damage);
             StartCoroutine(hitCD());
-            Instantiate(HitControler.Instance.hitEffectBlood, transform.position, transform.rotation);
+            Instantiate(HitController.Instance.hitEffectBlood, transform.position, transform.rotation);
         }
     }
 

@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour, i_Update
     {
         if (!BoolControler.Instance.isDead)
         {
-            if (HitControler.Instance.Head_Neck_Hit || HitControler.Instance.Torso_Waist_Hit || (HitControler.Instance.L_Thigh_Hit && HitControler.Instance.R_Thigh_Hit))
+            if (HitController.Instance.Head_Neck_Hit || HitController.Instance.Torso_Waist_Hit || (HitController.Instance.L_Thigh_Hit && HitController.Instance.R_Thigh_Hit))
             {
                 Die();
             }
@@ -54,7 +54,7 @@ public class PlayerHealth : MonoBehaviour, i_Update
     private void Die()
     {
         BoolControler.Instance.isDead = true;
-        StartCoroutine(HitControler.Instance.SlowMow());
+        StartCoroutine(HitController.Instance.SlowMow());
         healthSlider.value = 0f;
     }
 }
