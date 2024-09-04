@@ -14,17 +14,6 @@ public class PlayerHealth : MonoBehaviour, i_Update
         healthSlider.value = currentHealth;
     }
 
-    public void TakeDamage(float damage)
-    {
-        currentHealth -= damage;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        healthSlider.value = currentHealth;
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
 
     private void Start()
     {
@@ -40,28 +29,32 @@ public class PlayerHealth : MonoBehaviour, i_Update
     {
         if (!BoolControler.Instance.isDead)
         {
-            if (HitControler.Instance.Head_Neck_Hit || HitControler.Instance.Torso_Waist_Hit ||
-                (HitControler.Instance.L_Thigh_Hit && HitControler.Instance.R_Thigh_Hit))
+            if (HitControler.Instance.Head_Neck_Hit || HitControler.Instance.Torso_Waist_Hit || (HitControler.Instance.L_Thigh_Hit && HitControler.Instance.R_Thigh_Hit))
             {
                 Die();
             }
         }
     }
 
-    /*public void Die_BodyPart()
+    public void TakeDamage(float damage)
     {
-        BoolControler.Instance.isDead = true;
-    }*/
+        if (!BoolControler.Instance.isDead)
+        {
+            currentHealth -= damage;
+            currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+            healthSlider.value = currentHealth;
+
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
+        }
+    }
 
     private void Die()
     {
         BoolControler.Instance.isDead = true;
         StartCoroutine(HitControler.Instance.SlowMow());
         healthSlider.value = 0f;
-    }
-
-    public float GetCurrentHealth()
-    {
-        return currentHealth;
     }
 }
