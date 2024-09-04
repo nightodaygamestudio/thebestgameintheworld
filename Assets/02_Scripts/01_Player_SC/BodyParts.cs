@@ -7,7 +7,7 @@ public class BodyParts : MonoBehaviour
     public float force;
     public bool cutOff = false;
     public bool TorsoHitRBRemover;
-    public GameObject hitEffectBlood;
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Weapon") && !HitControler.Instance.HasBeenHit && !cutOff)
@@ -22,7 +22,7 @@ public class BodyParts : MonoBehaviour
     public void DetachBodyPart()
     {
         cutOff = true;
-        Instantiate(hitEffectBlood, transform.position, transform.rotation);
+        Instantiate(HitControler.Instance.hitEffectBlood, transform.position, transform.rotation);
         transform.parent = null;
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.isKinematic = false;

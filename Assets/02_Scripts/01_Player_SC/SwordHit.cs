@@ -7,11 +7,7 @@ public class SwordHit : MonoBehaviour
     public Collider hitCollider;
     public PlayerHealth ph;
     public float damage;
-    private void Start()
-    {
-
-        ph.GetComponent<PlayerHealth>();
-    }
+    private void Start() { ph.GetComponent<PlayerHealth>(); }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("BodyPart")) { hitCollider.enabled = false; StartCoroutine(hitCD()); }
@@ -21,7 +17,7 @@ public class SwordHit : MonoBehaviour
         if (collision.gameObject.CompareTag("R_Thigh")) { HitControler.Instance.R_Thigh_Hit = true; StartCoroutine(hitCD()); }
     }
     private void OnTriggerEnter(Collider other)
-    { if (other.gameObject.CompareTag("BodyPart")) { ph.currentHealth = -damage; StartCoroutine(hitCD()); } }
+    { if (other.gameObject.CompareTag("BodyPart")) { ph.currentHealth -= damage; StartCoroutine(hitCD()); } }
     private IEnumerator hitCD()
     {
         yield return new WaitForSeconds(CD);

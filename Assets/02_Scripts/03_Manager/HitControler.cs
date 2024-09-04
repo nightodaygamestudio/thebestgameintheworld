@@ -13,6 +13,7 @@ public class HitControler : MonoBehaviour
     public bool L_Thigh_Hit;
     public bool R_Thigh_Hit;
     public bool HasBeenHit;
+    public GameObject hitEffectBlood;
 
 
     //-----------//
