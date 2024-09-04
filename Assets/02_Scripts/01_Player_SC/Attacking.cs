@@ -8,12 +8,14 @@ public class Attacking : MonoBehaviour
     public float AttackSpeed;
     [Header("Objects")]
     [SerializeField] Animator UpAttackAnim;
+    [SerializeField] Collider swordCollider;
     public void OnUpAttack(InputAction.CallbackContext context)
     {
         if (context.started && canAttack)
         {
             UpAttackAnim.SetTrigger("UpAttack");
             canAttack = false;
+            swordCollider.enabled = true;
             StartCoroutine(OnAttackIsCD());
         }
     }
@@ -23,6 +25,7 @@ public class Attacking : MonoBehaviour
         {
             UpAttackAnim.SetTrigger("SideAttack");
             canAttack = false;
+            swordCollider.enabled = true;
             StartCoroutine(OnAttackIsCD());
         }
     }
@@ -30,5 +33,6 @@ public class Attacking : MonoBehaviour
     {
         yield return new WaitForSeconds(AttackSpeed);
         canAttack = true;
+        swordCollider.enabled = false;
     }
 }
