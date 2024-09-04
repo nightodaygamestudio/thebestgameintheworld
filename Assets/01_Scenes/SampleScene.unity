@@ -939,7 +939,7 @@ MonoBehaviour:
   L_Thigh_Hit: 0
   R_Thigh_Hit: 0
   HasBeenHit: 0
-  hitEffectBlood: {fileID: 0}
+  hitEffectBlood: {fileID: 4165833423536095052, guid: 029a8a152cb820d4abeda993881f30ef, type: 3}
 --- !u!1 &536764216
 GameObject:
   m_ObjectHideFlags: 0

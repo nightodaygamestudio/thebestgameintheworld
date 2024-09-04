@@ -17,7 +17,7 @@ public class SwordHit : MonoBehaviour
         if (collision.gameObject.CompareTag("R_Thigh")) { HitControler.Instance.R_Thigh_Hit = true; StartCoroutine(hitCD()); }
     }
     private void OnTriggerEnter(Collider other)
-    { if (other.gameObject.CompareTag("BodyPart")) { ph.currentHealth -= damage; StartCoroutine(hitCD()); } }
+    { if (other.gameObject.CompareTag("BodyPart")) { ph.currentHealth -= damage; StartCoroutine(hitCD()); Instantiate(HitControler.Instance.hitEffectBlood, transform.position, transform.rotation); } }
     private IEnumerator hitCD()
     {
         yield return new WaitForSeconds(CD);
