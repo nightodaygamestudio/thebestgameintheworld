@@ -56,7 +56,7 @@ public class PlayerNetwork : NetworkBehaviour {
         if (Input.GetKey(KeyCode.A)) moveDir.x = -1f;
         if (Input.GetKey(KeyCode.D)) moveDir.x = +1f;
 
-        float moveSpeed = 3f;
+        float moveSpeed = 5f;
         transform.position += moveDir * moveSpeed * Time.deltaTime;
     }
 
