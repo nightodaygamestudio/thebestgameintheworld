@@ -930,7 +930,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 524366816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5360ee1a389a3094aba62bc8dd6d4ef0, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a28ad1122a040d46822664b3148f095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SloMoFactor: 0.1
