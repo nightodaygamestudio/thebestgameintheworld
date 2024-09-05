@@ -8,7 +8,7 @@ DefaultImporter:
 AssetOrigin:
   serializedVersion: 1
   productId: 196526
-  packageName: Starter Assets - Third Person Character Controller | URP
-  packageVersion: 1.1.5
-  assetPath: Assets/StarterAssets/ThirdPersonController/Scenes/Playground.unity
-  uploadId: 592926
+  packageName: Starter Assets - Third Person Character Controller
+  packageVersion: 1.1.4
+  assetPath: Assets/07_3rdParty/ThridPerson/ThirdPersonController/Scenes/Playground.unity
+  uploadId: 561412
