@@ -14,21 +14,6 @@ using UnityEngine.UI;
 
 public class P2PRelay : MonoBehaviour 
 {
-    /*
-    [SerializeField] private Button hostBtn;
-    [SerializeField] private Button joinBtn;
-
-    private void Awake()
-    {
-        hostBtn.onClick.AddListener(() => {
-            CreateRelay();  
-        });
-        joinBtn.onClick.AddListener(() => {
-            JoinRelay(string joinCode);
-        });
-    }
-    */
-
     private async void Start()  {
         await UnityServices.InitializeAsync();
 
